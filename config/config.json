@@ -22,5 +22,14 @@
     "URI": "postgres://debapqqtpnzwzx:9a64ef6da2463c43c7e7b648c04e53dc41abf59616cee7cf2c2c21360c21a29e@ec2-35-172-16-31.compute-1.amazonaws.com:5432/d6ob914nj6qgsv",
     "dialect": "postgres"
   },
+  "stage": {
+    "username": "debapqqtpnzwzx",
+    "password": "9a64ef6da2463c43c7e7b648c04e53dc41abf59616cee7cf2c2c21360c21a29e",
+    "database": "d6ob914nj6qgsv",
+    "host": "ec2-35-172-16-31.compute-1.amazonaws.com",
+    "port": "5432",
+    "URI": "postgres://debapqqtpnzwzx:9a64ef6da2463c43c7e7b648c04e53dc41abf59616cee7cf2c2c21360c21a29e@ec2-35-172-16-31.compute-1.amazonaws.com:5432/d6ob914nj6qgsv",
+    "dialect": "postgres"
+  },
   "secretKey": "dungeon"
 }
