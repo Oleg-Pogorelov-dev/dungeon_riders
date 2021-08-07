@@ -1,5 +1,5 @@
 const jwt = require("jsonwebtoken");
-const keyJwt = require("../config/config.json").secretKey;
+const keyJwt = require("../config/config").secretKey;
 
 const createToken = (user, expiresIn) => {
   try {
