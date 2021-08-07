@@ -6,23 +6,18 @@
     "host": "127.0.0.1",
     "dialect": "postgres"
   },
-  "test": {
-    "username": "root",
-    "password": null,
-    "database": "database_test",
-    "host": "127.0.0.1",
+  "production": {
+    "username": "postgres",
+    "password": "postgres",
+    "database": "dungeon_raiders",
+    "host": "80.249.150.81",
     "dialect": "postgres"
   },
-  "production": {
-    "use_env_variable": "DATABASE_URL"
-  },
   "stage": {
-    "username": "debapqqtpnzwzx",
-    "password": "9a64ef6da2463c43c7e7b648c04e53dc41abf59616cee7cf2c2c21360c21a29e",
-    "database": "d6ob914nj6qgsv",
-    "host": "ec2-35-172-16-31.compute-1.amazonaws.com",
-    "port": "5432",
-    "URI": "postgres://debapqqtpnzwzx:9a64ef6da2463c43c7e7b648c04e53dc41abf59616cee7cf2c2c21360c21a29e@ec2-35-172-16-31.compute-1.amazonaws.com:5432/d6ob914nj6qgsv",
+    "username": "fusion_tech",
+    "password": null,
+    "database": "dungeon_raiders",
+    "host": "127.0.0.1",
     "dialect": "postgres"
   },
   "secretKey": "dungeon"
