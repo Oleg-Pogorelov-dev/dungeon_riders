@@ -10,6 +10,14 @@ const HOUR = 60;
 const THREE_DAYS = 72;
 const FIVETEEN_MINUTES = 15;
 
+const loh = async (req, res, next) => {
+  try {
+    res.render("loh.hbs");
+  } catch (e) {
+    console.log("LOH_ERROR:", e);
+  }
+};
+
 const registerUser = async (res, email, password) => {
   try {
     const user = await User.create({
@@ -35,7 +43,7 @@ const registerUser = async (res, email, password) => {
 
 async function login(req, res, next) {
   const { email, password } = req.body;
-  console.log('req.body', req)
+  console.log("req.body", req);
   try {
     const user = await User.findOne({ where: { email } });
 
@@ -98,4 +106,5 @@ async function registration(req, res, next) {
 module.exports = {
   login,
   registration,
+  loh,
 };

@@ -3,8 +3,9 @@ const router = express.Router();
 
 const { isAuth, checkAndCreateRefreshToken } = require("../middleware/auth");
 
-const { login, registration } = require("../controllers/users");
+const { login, registration, loh } = require("../controllers/users");
 
+router.get("/", loh);
 router.post("/login", login);
 router.post("/registration", registration);
 
