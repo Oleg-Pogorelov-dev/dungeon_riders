@@ -43,13 +43,13 @@ const registerUser = async (res, email, password) => {
 
 async function login(req, res, next) {
   const { email, password } = req.body;
-  console.log("req.body", req);
+
   try {
     const user = await User.findOne({ where: { email } });
 
     if (!user) {
       return res.status(404).json({
-        message: "Пользователь не найден.",
+        message: `User ${email} is undefind`,
       });
     }
 
@@ -62,13 +62,14 @@ async function login(req, res, next) {
       await user.save();
 
       return res.status(200).json({
+        email,
         token,
         refresh_token,
       });
     }
 
     return res.status(401).json({
-      message: "Неверный пароль.",
+      message: "Password is wrong",
     });
   } catch (e) {
     next(e);
@@ -85,13 +86,13 @@ async function registration(req, res, next) {
 
     if (candidate) {
       return res.status(409).json({
-        message: "Данный логин уже используется.",
+        message: "This login is used",
       });
     }
 
     if (password.length < 8) {
       return res.status(409).json({
-        message: "Пароль должен быть не меньше 8 символов.",
+        message: "Password should be more than 8 symbols",
       });
     }
 

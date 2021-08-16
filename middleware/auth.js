@@ -5,7 +5,7 @@ const { createToken } = require("../utils/auth");
 
 const isAuth = (req, res, next) => {
   try {
-    const token = req.headers["authorization"];
+    const token = req.headers["authorization"][1];
     const email = jwt.verify(token, keyJwt).email;
     req.body.email = email;
     next();
